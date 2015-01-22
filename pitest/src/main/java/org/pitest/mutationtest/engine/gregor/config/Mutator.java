@@ -44,6 +44,7 @@ import org.pitest.mutationtest.engine.gregor.mutators.RemoveConditionalMutator.C
 import org.pitest.mutationtest.engine.gregor.mutators.ArgumentPropagationMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.ReturnValsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.VoidMethodCallMutator;
+import org.pitest.mutationtest.engine.gregor.mutators.experimental.InsertionOrderCollectionMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveIncrementsMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.RemoveSwitchMutator;
 import org.pitest.mutationtest.engine.gregor.mutators.experimental.SwitchMutator;
@@ -148,6 +149,8 @@ public final class Mutator {
     add("EXPERIMENTAL_ARGUMENT_PROPAGATION",
         ArgumentPropagationMutator.ARGUMENT_PROPAGATION_MUTATOR);
 
+    add("EXPERIMENTAL_INSERTION_ORDER_COLLECTION_MUTATOR", InsertionOrderCollectionMutator.INSERTION_ORDER_COLLECTION_MUTATOR);
+    
     addGroup("REMOVE_SWITCH", RemoveSwitchMutator.makeMutators());
     addGroup("DEFAULTS", defaults());
     addGroup("STRONGER", stronger());
